@@ -17,7 +17,7 @@ public class Quetscher : IDisposable
     {
         ValidateDirectories();
 
-        var fileName = new Random().Next(0, 6666).ToString();
+        var fileName = new Random().Next(10000, 99999).ToString();
 
         if (args.ContainsKey(Konstanten.ArgName))
             fileName = args[Konstanten.ArgName];
