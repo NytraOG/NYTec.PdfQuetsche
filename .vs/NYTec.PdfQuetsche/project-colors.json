@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "4d9eee12-1c4f-4794-931b-1e689e8c43e9": {
+      "ProjectGuid": "4d9eee12-1c4f-4794-931b-1e689e8c43e9",
+      "DisplayName": "PdfQuetsche",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "d43bee19-fe7f-40c9-a6cc-af7e38b7a736": {
+      "ProjectGuid": "d43bee19-fe7f-40c9-a6cc-af7e38b7a736",
+      "DisplayName": "PdfQuetsche.Tests",
+      "ColorIndex": 1
+    },
+    "38a8cc70-0fa4-4f24-957e-a144e2b181c2": {
+      "ProjectGuid": "38a8cc70-0fa4-4f24-957e-a144e2b181c2",
+      "DisplayName": "PdfQuetsche.Installer",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

@@ -1,22 +1,41 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfQuetsche", "PdfQuetsche\PdfQuetsche.csproj", "{4D9EEE12-1C4F-4794-931B-1E689E8C43E9}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PdfQuetsche", "PdfQuetsche\PdfQuetsche.csproj", "{4D9EEE12-1C4F-4794-931B-1E689E8C43E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfQuetsche.Tests", "PdfQuetsche.Tests\PdfQuetsche.Tests.csproj", "{D43BEE19-FE7F-40C9-A6CC-AF7E38B7A736}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PdfQuetsche.Tests", "PdfQuetsche.Tests\PdfQuetsche.Tests.csproj", "{D43BEE19-FE7F-40C9-A6CC-AF7E38B7A736}"
+EndProject
+Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "PdfQuetsche.Installer", "PdfQuetsche.Installer\PdfQuetsche.Installer.aiproj", "{38A8CC70-0FA4-4F24-957E-A144E2B181C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		All|Any CPU = All|Any CPU
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D9EEE12-1C4F-4794-931B-1E689E8C43E9}.All|Any CPU.ActiveCfg = Release|Any CPU
+		{4D9EEE12-1C4F-4794-931B-1E689E8C43E9}.All|Any CPU.Build.0 = Release|Any CPU
 		{4D9EEE12-1C4F-4794-931B-1E689E8C43E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4D9EEE12-1C4F-4794-931B-1E689E8C43E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D9EEE12-1C4F-4794-931B-1E689E8C43E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D9EEE12-1C4F-4794-931B-1E689E8C43E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D43BEE19-FE7F-40C9-A6CC-AF7E38B7A736}.All|Any CPU.ActiveCfg = Release|Any CPU
+		{D43BEE19-FE7F-40C9-A6CC-AF7E38B7A736}.All|Any CPU.Build.0 = Release|Any CPU
 		{D43BEE19-FE7F-40C9-A6CC-AF7E38B7A736}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D43BEE19-FE7F-40C9-A6CC-AF7E38B7A736}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D43BEE19-FE7F-40C9-A6CC-AF7E38B7A736}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D43BEE19-FE7F-40C9-A6CC-AF7E38B7A736}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38A8CC70-0FA4-4F24-957E-A144E2B181C2}.All|Any CPU.ActiveCfg = DefaultBuild
+		{38A8CC70-0FA4-4F24-957E-A144E2B181C2}.Debug|Any CPU.ActiveCfg = DefaultBuild
+		{38A8CC70-0FA4-4F24-957E-A144E2B181C2}.Release|Any CPU.ActiveCfg = DefaultBuild
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BEDF5F70-8187-400A-B02B-4302E51D581A}
 	EndGlobalSection
 EndGlobal
