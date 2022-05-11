@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <DOCUMENT Type="Advanced Installer" CreateVersion="19.4" version="19.4" Modules="simple" RootPath="." Language="en" Id="{11467405-1250-49A5-BA49-4139F0226EBC}">
   <COMPONENT cid="caphyon.advinst.msicomp.ProjectOptionsComponent">
-    <ROW Name="HiddenItems" Value="AppXProductDetailsComponent;AppXDependenciesComponent;AppXAppDetailsComponent;AppXVisualAssetsComponent;AppXCapabilitiesComponent;AppXAppDeclarationsComponent;AppXUriRulesComponent"/>
+    <ROW Name="HiddenItems" Value="AppXProductDetailsComponent;AppXDependenciesComponent;AppXAppDetailsComponent;AppXVisualAssetsComponent;AppXCapabilitiesComponent;AppXAppDeclarationsComponent;AppXUriRulesComponent;FixupComponent;MsiXDiffComponent;MsixManifestEditorComponent"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
     <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
@@ -9,11 +9,12 @@
     <ROW Property="AI_PACKAGING_TOOL" Value="Advanced Installer 19.4 build 4648ec91" ValueLocId="-"/>
     <ROW Property="ALLUSERS" Value="1"/>
     <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
-    <ROW Property="Manufacturer" Value="Your Company"/>
-    <ROW Property="ProductCode" Value="1033:{79D5B6F1-E642-4590-936B-B6A1B2CD4C21} " Type="16"/>
+    <ROW Property="ARPPRODUCTICON" Value="French_Press.exe" Type="8"/>
+    <ROW Property="Manufacturer" Value="nyTEC"/>
+    <ROW Property="ProductCode" Value="1033:{B89122C1-1EF3-4DB2-B945-796CEA408358} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
-    <ROW Property="ProductName" Value="Your Application"/>
-    <ROW Property="ProductVersion" Value="1.0.0"/>
+    <ROW Property="ProductName" Value="Pdf-Quetsche"/>
+    <ROW Property="ProductVersion" Value="0.1.0"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{8FE09B3A-168E-4881-975E-E625A7E1C9E9}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
@@ -31,11 +32,27 @@
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
     <ROW Component="APPDIR" ComponentId="{4E7BCBCD-324B-4F8F-8841-727224C7AF2B}" Directory_="APPDIR" Attributes="0"/>
+    <ROW Component="BouncyCastle.Crypto.dll" ComponentId="{03CC4F43-A5D7-4718-B509-D90F4F950763}" Directory_="APPDIR" Attributes="0" KeyPath="BouncyCastle.Crypto.dll"/>
+    <ROW Component="PdfQuetsche.deps.json" ComponentId="{66ABCA1D-6B6F-48DE-BE26-C18BEC423727}" Directory_="APPDIR" Attributes="0" KeyPath="PdfQuetsche.deps.json" Type="0"/>
+    <ROW Component="PdfQuetsche.dll" ComponentId="{2077CD58-700E-4F78-A723-1669A9675207}" Directory_="APPDIR" Attributes="0" KeyPath="PdfQuetsche.dll"/>
+    <ROW Component="PdfQuetsche.exe" ComponentId="{E86FE025-BC14-45C8-B253-1965FDAB0153}" Directory_="APPDIR" Attributes="256" KeyPath="PdfQuetsche.exe"/>
     <ROW Component="ProductInformation" ComponentId="{9BABFE02-527D-4137-B26E-D143D98A8F03}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="itextsharp.dll" ComponentId="{C2964915-7518-433F-AE76-E5941C35A3AF}" Directory_="APPDIR" Attributes="0" KeyPath="itextsharp.dll"/>
+    <ROW Component="nbsbuilder.exe" ComponentId="{8AB58577-DE55-4896-A762-7B850A58CDD7}" Directory_="APPDIR" Attributes="0" KeyPath="nbsbuilder.exe"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
     <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
     <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="BouncyCastle.Crypto.dll" Component_="BouncyCastle.Crypto.dll" FileName="BOUNCY~1.DLL|BouncyCastle.Crypto.dll" Attributes="0" SourcePath="..\PdfQuetsche\bin\Debug\net6.0\BouncyCastle.Crypto.dll" SelfReg="false"/>
+    <ROW File="itextsharp.dll" Component_="itextsharp.dll" FileName="ITEXTS~1.DLL|itextsharp.dll" Attributes="0" SourcePath="..\PdfQuetsche\bin\Debug\net6.0\itextsharp.dll" SelfReg="false"/>
+    <ROW File="nbsbuilder.exe" Component_="nbsbuilder.exe" FileName="NBSBUI~1.EXE|nbsbuilder.exe" Attributes="0" SourcePath="..\PdfQuetsche\bin\Debug\net6.0\nbsbuilder.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="PdfQuetsche.deps.json" Component_="PdfQuetsche.deps.json" FileName="PDFQUE~1.JSO|PdfQuetsche.deps.json" Attributes="0" SourcePath="..\PdfQuetsche\bin\Debug\net6.0\PdfQuetsche.deps.json" SelfReg="false"/>
+    <ROW File="PdfQuetsche.dll" Component_="PdfQuetsche.dll" FileName="PDFQUE~1.DLL|PdfQuetsche.dll" Attributes="0" SourcePath="..\PdfQuetsche\bin\Debug\net6.0\PdfQuetsche.dll" SelfReg="false"/>
+    <ROW File="PdfQuetsche.exe" Component_="PdfQuetsche.exe" FileName="PDFQUE~1.EXE|PdfQuetsche.exe" Attributes="0" SourcePath="..\PdfQuetsche\bin\Debug\net6.0\PdfQuetsche.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="PdfQuetsche.pdb" Component_="PdfQuetsche.exe" FileName="PDFQUE~1.PDB|PdfQuetsche.pdb" Attributes="0" SourcePath="..\PdfQuetsche\bin\Debug\net6.0\PdfQuetsche.pdb" SelfReg="false"/>
+    <ROW File="PdfQuetsche.runtimeconfig.json" Component_="PdfQuetsche.deps.json" FileName="PDFQUE~2.JSO|PdfQuetsche.runtimeconfig.json" Attributes="0" SourcePath="..\PdfQuetsche\bin\Debug\net6.0\PdfQuetsche.runtimeconfig.json" SelfReg="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
     <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
@@ -106,9 +123,21 @@
     <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
     <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
   </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiEnvComponent">
+    <ROW Environment="Path" Name="=Path" Value="[~];[ProgramFilesFolder][Manufacturer]\[ProductName]" Component_="APPDIR"/>
+  </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatCompsComponent">
     <ROW Feature_="MainFeature" Component_="APPDIR"/>
     <ROW Feature_="MainFeature" Component_="ProductInformation"/>
+    <ROW Feature_="MainFeature" Component_="BouncyCastle.Crypto.dll"/>
+    <ROW Feature_="MainFeature" Component_="itextsharp.dll"/>
+    <ROW Feature_="MainFeature" Component_="nbsbuilder.exe"/>
+    <ROW Feature_="MainFeature" Component_="PdfQuetsche.deps.json"/>
+    <ROW Feature_="MainFeature" Component_="PdfQuetsche.dll"/>
+    <ROW Feature_="MainFeature" Component_="PdfQuetsche.exe"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="French_Press.exe" SourcePath="C:\Users\chnyt\Downloads\French_Press.ico" Index="0"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
     <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
